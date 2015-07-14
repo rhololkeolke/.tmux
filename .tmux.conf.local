@@ -31,7 +31,13 @@ bind -n C-j select-pane -L
 bind -n C-l select-pane -R
 
 #打开鼠标控制
-setw -g mouse on
+bind m \
+	set -g mouse on;
+
+set-window-option -g mode-keys vi
+set-window-option -g utf8 on
 
 #取消tab建切换panel, 恢复默认效果
 unbind -n tab
+
+setw -g mode-keys vi
