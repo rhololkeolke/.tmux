@@ -32,7 +32,7 @@ bind -n C-l select-pane -R
 
 #打开鼠标控制
 bind m \
-	set -g mouse on;
+    run "if [[ `tmux show-option | grep 'mouse on'`  ]]; then toggle=off; else toggle=on; fi; tmux display-message \"mouse tmux: \$toggle\"; tmux set-option mouse \$toggle &> /dev/null;"
 
 set-window-option -g mode-keys vi
 set-window-option -g utf8 on
