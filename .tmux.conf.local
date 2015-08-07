@@ -41,3 +41,7 @@ set-window-option -g utf8 on
 unbind -n tab
 
 setw -g mode-keys vi
+
+# 滚轮滚屏
+bind -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "copy-mode; send-keys -M"
+bind -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "copy-mode; send-keys -M"
