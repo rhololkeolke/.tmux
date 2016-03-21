@@ -105,6 +105,13 @@ bind -n C-k select-pane -D
 bind -n C-j select-pane -L
 bind -n C-l select-pane -R
 
+bind -n M-i select-pane -U
+bind -n M-k select-pane -D
+bind -n M-j select-pane -L
+bind -n M-l select-pane -R
+
+
+
 #改变panel 大小
 bind -r C-I resize-pane -U 2
 bind -r C-K resize-pane -D 2
@@ -123,3 +130,8 @@ unbind -n tab
 
 # 提示信息显示时长  10*1000 ms
 set -g display-time 10000
+
+# 设定前缀为alt+b
+set -g prefix2 M-b
+bind M-b send-prefix -2
+
