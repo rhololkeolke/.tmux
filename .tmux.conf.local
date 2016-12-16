@@ -1,7 +1,7 @@
 # use the powerline patched font variant of the theme, possible values are:
 #   - default
 #   - powerline
-#tmux_conf_theme=default
+tmux_conf_theme=default
 tmux_conf_theme=powerline
 
 # display the battery information in the status line, possible values are:
@@ -14,7 +14,7 @@ tmux_conf_theme_battery=enabled
 #   - block
 #   - heart
 tmux_conf_battery_symbol=block
-#tmux_conf_battery_symbol=heart
+tmux_conf_battery_symbol=heart
 
 # number of symbols to use for battery status
 tmux_conf_battery_symbol_count=auto
@@ -30,8 +30,8 @@ tmux_conf_battery_palette='#d70000,#e4e4e4,#000000'
 tmux_conf_battery_palette=gradient
 
 # display the battery status: charging (U+26A1) / discharging (U+1F50B)
-#tmux_conf_battery_status=enabled
-tmux_conf_battery_status=disabled
+tmux_conf_battery_status=enabled
+#tmux_conf_battery_status=disabled
 
 # or alternatively use an external tool, e.g. https://github.com/Goles/Battery
 #tmux_conf_battery='#(battery -t) '
@@ -123,7 +123,7 @@ bind -T root WheelDownPane if-shell -F -t = "#{pane_in_mode}" "send-keys -M" "co
 bind -T root WheelUpPane if-shell -F -t = "#{pane_in_mode}" "send-keys -M" "copy-mode; send-keys -M"
 
 #set-window-option -g mode-keys vi
-#set-window-option -g utf8 on
+set-window-option -g utf8 on
 
 #取消tab建切换panel, 恢复默认效果
 unbind -n tab
@@ -134,4 +134,3 @@ set -g display-time 10000
 # 设定前缀为alt+b
 set -g prefix2 M-b
 bind M-b send-prefix -2
-
