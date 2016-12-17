@@ -133,3 +133,8 @@ set -g display-time 10000
 # 设定前缀为alt+b
 set -g prefix2 M-b
 bind M-b send-prefix -2
+
+# cygwin ctrl-v
+if-shell 'uname | grep -qi Cygwin' 'bind -T root C-v run "cat /dev/clipboard | tmux load-buffer - ; tmux paste-buffer"'
+
+
