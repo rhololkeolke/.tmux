@@ -122,8 +122,7 @@ bind -r C-L resize-pane -R 2
 bind -T root WheelDownPane if-shell -F -t = "#{pane_in_mode}" "send-keys -M" "copy-mode; send-keys -M"
 bind -T root WheelUpPane if-shell -F -t = "#{pane_in_mode}" "send-keys -M" "copy-mode; send-keys -M"
 
-#set-window-option -g mode-keys vi
-set-window-option -g utf8 on
+set-window-option -g mode-keys vi
 
 #取消tab建切换panel, 恢复默认效果
 unbind -n tab
