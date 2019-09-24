@@ -276,7 +276,7 @@ set -g history-limit 100000
 bind -T root WheelDownPane if-shell -F -t = "#{pane_in_mode}" "send-keys -M" "copy-mode; send-keys -M"
 bind -T root WheelUpPane if-shell -F -t = "#{pane_in_mode}" "send-keys -M" "copy-mode; send-keys -M"
 
-set-window-option -g mode-keys vi
+set-window-option -g mode-keys emacs
 
 # 提示信息显示时长  10*1000 ms
 set -g display-time 10000
